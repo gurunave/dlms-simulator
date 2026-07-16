@@ -7,6 +7,21 @@ For architecture and developer setup, see [README.md](README.md).
 
 ---
 
+## Prerequisites
+
+**Using a prebuilt release (recommended): nothing to install.** The download is
+self-contained. You only need:
+- A supported 64-bit OS — **Windows 10/11**, **Linux** (Ubuntu 20.04+ or similar),
+  or **macOS 12+** (Apple Silicon or Intel).
+- A modern **web browser** (Chrome, Edge, Firefox, or Safari).
+- To reach the UI from **other computers**, allow the port through the firewall
+  on the machine running the simulator (see "Open the UI from another computer").
+
+**Running from source instead?** You'll need the **.NET 9 SDK**, **Node.js 18+**,
+and **Git** — see [README.md → Prerequisites](README.md#prerequisites).
+
+---
+
 ## 1. Start the app
 
 **Option A — packaged build (easiest, nothing to install).**

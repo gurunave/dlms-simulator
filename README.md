@@ -32,9 +32,12 @@ Gurux.DLMS.Net/          Vendored Gurux DLMS library (GPL-2.0) — the GUI build
 ```
 
 ## Download
+**Prerequisites: none** — the prebuilt builds are self-contained (the .NET
+runtime is bundled). You just need a supported 64-bit OS (Windows 10/11, Linux,
+or macOS 12+) and a web browser.
+
 Prebuilt standalone builds are attached to
-[Releases](https://github.com/gurunave/dlms-simulator/releases) — no .NET or Node
-install needed:
+[Releases](https://github.com/gurunave/dlms-simulator/releases):
 
 | Platform | Asset | Run |
 |----------|-------|-----|
@@ -50,7 +53,9 @@ Releases are produced automatically by GitHub Actions when a version tag is
 pushed (`git tag v1.1.0 && git push origin v1.1.0`).
 
 ## Quick start (from source)
-Prerequisites: **.NET 9 SDK** and **Node.js 18+**.
+Prerequisites: **.NET 9 SDK (9.0.x)**, **Node.js 18+** (20 LTS recommended) + npm,
+and **Git**. See [DlmsSimulatorGui/README.md](DlmsSimulatorGui/README.md#prerequisites)
+for the full list.
 
 ```bash
 # 1) Build the UI into the backend

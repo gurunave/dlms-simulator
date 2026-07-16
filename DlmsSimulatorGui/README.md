@@ -42,13 +42,35 @@ and references `../Gurux.DLMS.Net/Development/Gurux.DLMS.Net.csproj` — the sam
 library the official simulator uses.
 
 ## Prerequisites
-- .NET 9 SDK
-- Node.js 18+ / npm
 
-> Note: the local clone at `../Gurux.DLMS.Net/Development/Gurux.DLMS.Net.csproj`
-> was constrained to `net9.0` (it originally multi-targeted up to net10.0) so it
+### To run a prebuilt release (end users)
+**Nothing to install** — the builds on [Releases](https://github.com/gurunave/dlms-simulator/releases)
+are self-contained (the .NET runtime is bundled). You only need:
+- A supported 64-bit OS: **Windows 10/11**, **Linux** (glibc-based, e.g. Ubuntu 20.04+),
+  or **macOS 12+** (Apple Silicon or Intel).
+- A modern web browser (Chrome, Edge, Firefox, or Safari).
+- For LAN access from other machines: permission to open the port through the
+  firewall on the machine running the simulator.
+
+### To build from source (developers)
+| Tool | Version | Why |
+|------|---------|-----|
+| [.NET SDK](https://dotnet.microsoft.com/download) | **9.0.x** | Builds and runs the backend and the DLMS library. |
+| [Node.js](https://nodejs.org) + npm | **18+** (built/tested on 20 LTS) | Builds the React UI. |
+| [Git](https://git-scm.com) | any recent | Clone the repository. |
+| Internet access | — | First build restores NuGet + npm packages. |
+
+Any OS with the .NET 9 SDK works (Windows, Linux, macOS). Check your toolchain:
+```bash
+dotnet --version   # 9.0.x
+node --version     # v18+  (v20 recommended)
+```
+
+> Note: the vendored `Gurux.DLMS.Net/Development/Gurux.DLMS.Net.csproj` was
+> constrained to `net9.0` (it originally multi-targeted up to net10.0) so it
 > builds with the .NET 9 SDK. The original TargetFrameworks list is preserved in
-> a comment in that csproj.
+> a comment in that csproj. If you install a newer SDK that supports net10.0, you
+> can restore the original list.
 
 ## Run — development (hot reload)
 Two terminals:

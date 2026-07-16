@@ -3,6 +3,7 @@
 > Web-based GUI for the Gurux DLMS/COSEM meter simulator — create virtual DLMS
 > meters, edit their COSEM objects, and watch client traffic live in the browser.
 
+[![Release](https://github.com/gurunave/dlms-simulator/actions/workflows/release.yml/badge.svg)](https://github.com/gurunave/dlms-simulator/actions/workflows/release.yml)
 ![License](https://img.shields.io/badge/license-GPL--2.0-blue)
 ![Backend](https://img.shields.io/badge/backend-ASP.NET%20Core%20(.NET%209)-512BD4)
 ![Frontend](https://img.shields.io/badge/frontend-React%20%2B%20Vite-61DAFB)
@@ -30,7 +31,16 @@ Gurux.DLMS.Net/          Vendored Gurux DLMS library (GPL-2.0) — the GUI build
   Gurux.DLMS.Simulator.Net/   included; unused Gurux example projects are omitted.
 ```
 
-## Quick start
+## Download
+Prebuilt **Windows x64** builds are attached to
+[Releases](https://github.com/gurunave/dlms-simulator/releases) — download the
+`DlmsSimulator-win-x64.zip`, unzip, and double-click **`Start DLMS Simulator.cmd`**.
+No .NET or Node install needed.
+
+Releases are produced automatically by GitHub Actions when a version tag is
+pushed (`git tag v1.0.0 && git push origin v1.0.0`).
+
+## Quick start (from source)
 Prerequisites: **.NET 9 SDK** and **Node.js 18+**.
 
 ```bash

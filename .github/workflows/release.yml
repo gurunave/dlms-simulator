@@ -1,0 +1,87 @@
+name: Release
+
+# Build a self-contained Windows EXE and, when a version tag is pushed,
+# attach the packaged zip to a GitHub Release.
+#
+#   git tag v1.0.0 && git push origin v1.0.0
+#
+# Runs on manual dispatch too (produces a downloadable build artifact only).
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 9
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: DlmsSimulatorGui/frontend/package-lock.json
+
+      - name: Build web UI
+        working-directory: DlmsSimulatorGui/frontend
+        run: |
+          npm ci
+          npm run build
+
+      - name: Publish simulator (win-x64, self-contained single file)
+        working-directory: DlmsSimulatorGui/backend
+        run: >
+          dotnet publish DlmsSimulatorGui.Api.csproj -c Release -r win-x64
+          --self-contained true
+          -p:PublishSingleFile=true
+          -p:IncludeNativeLibrariesForSelfExtract=true
+          -p:EnableCompressionInSingleFile=true
+          -p:GeneratePackageOnBuild=false
+          -o "${{ github.workspace }}/dist/win-x64"
+
+      - name: Publish DlmsProbe test client (win-x64)
+        working-directory: DlmsSimulatorGui/tools/DlmsProbe
+        run: >
+          dotnet publish DlmsProbe.csproj -c Release -r win-x64
+          --self-contained true
+          -p:PublishSingleFile=true
+          -p:IncludeNativeLibrariesForSelfExtract=true
+          -p:EnableCompressionInSingleFile=true
+          -p:GeneratePackageOnBuild=false
+          -o "${{ github.workspace }}/dist/win-x64/tools"
+
+      - name: Add launcher + readme, trim symbols
+        shell: pwsh
+        run: |
+          Copy-Item "DlmsSimulatorGui/packaging/win-x64/*" "dist/win-x64/" -Force
+          Remove-Item "dist/win-x64/*.pdb","dist/win-x64/tools/*.pdb","dist/win-x64/web.config" -Force -ErrorAction SilentlyContinue
+
+      - name: Package zip
+        shell: pwsh
+        run: Compress-Archive -Path "dist/win-x64/*" -DestinationPath "DlmsSimulator-win-x64.zip" -CompressionLevel Optimal
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: DlmsSimulator-win-x64
+          path: DlmsSimulator-win-x64.zip
+
+      - name: Attach to GitHub Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: DlmsSimulator-win-x64.zip
+          generate_release_notes: true

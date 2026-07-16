@@ -1,0 +1,30 @@
+# ---- Build artifacts ----
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+.vs/
+
+# ---- Node / frontend ----
+node_modules/
+# Built UI (produced by `npm run build`); build it, don't commit it.
+DlmsSimulatorGui/backend/wwwroot/
+
+# ---- Runtime data ----
+# Templates are seeded on first run from the vendored Gurux simulator.
+DlmsSimulatorGui/backend/templates/
+
+# ---- Logs / temp ----
+*.log
+
+# ---- Claude Code local config ----
+.claude/
+
+# ---- Vendored Gurux: keep only the library + simulator, drop unused examples ----
+Gurux.DLMS.Net/Gurux.DLMS.Client.Example.Net/
+Gurux.DLMS.Net/Gurux.DLMS.Client.Example.VB/
+Gurux.DLMS.Net/Gurux.DLMS.Meter.Listener.Net/
+Gurux.DLMS.Net/Gurux.DLMS.Push.Listener.Example.Net/
+Gurux.DLMS.Net/Gurux.DLMS.SMS.Listener.Example.Net/
+Gurux.DLMS.Net/Gurux.DLMS.Server.Example.Net/
+Gurux.DLMS.Net/Gurux.DLMS.XmlClient/

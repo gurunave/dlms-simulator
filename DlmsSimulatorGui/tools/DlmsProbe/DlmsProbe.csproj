@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <NoWarn>$(NoWarn);CS8600;CS8602;CS8604;CS0168</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Gurux.Net" Version="8.4.2503.1001" />
+    <PackageReference Include="Gurux.Serial" Version="8.4.2503.603" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Gurux.DLMS.Net\Development\Gurux.DLMS.Net.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Reuse the official simulator's DLMS reader (a real client). -->
+    <Compile Include="..\..\..\Gurux.DLMS.Net\Gurux.DLMS.Simulator.Net\GXDLMSReader.cs">
+      <Link>GXDLMSReader.cs</Link>
+    </Compile>
+  </ItemGroup>
+</Project>

@@ -1,5 +1,14 @@
 # DLMS Simulator
 
+> Web-based GUI for the Gurux DLMS/COSEM meter simulator — create virtual DLMS
+> meters, edit their COSEM objects, and watch client traffic live in the browser.
+
+![License](https://img.shields.io/badge/license-GPL--2.0-blue)
+![Backend](https://img.shields.io/badge/backend-ASP.NET%20Core%20(.NET%209)-512BD4)
+![Frontend](https://img.shields.io/badge/frontend-React%20%2B%20Vite-61DAFB)
+![Realtime](https://img.shields.io/badge/realtime-SignalR-ff6f00)
+![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-informational)
+
 A web-based GUI for the **Gurux DLMS/COSEM meter simulator**. Create virtual
 DLMS meters, browse and edit their COSEM objects, and watch live client traffic
 in the browser — no physical meter required.

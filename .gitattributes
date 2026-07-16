@@ -1,0 +1,11 @@
+# Normalize line endings across platforms.
+* text=auto eol=lf
+*.sln text eol=crlf
+*.csproj text eol=crlf
+*.png binary
+*.ico binary
+
+# ---- GitHub Linguist ----
+# The Gurux DLMS library is vendored, not authored here. Exclude it from
+# the repository language statistics so the bar reflects this GUI project.
+Gurux.DLMS.Net/** linguist-vendored

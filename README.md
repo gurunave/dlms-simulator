@@ -85,6 +85,15 @@ For hot-reload development (UI on :5173 proxying to the backend), see
 [DlmsSimulatorGui/README.md](DlmsSimulatorGui/README.md). For how to operate the
 simulator, see [DlmsSimulatorGui/USAGE.md](DlmsSimulatorGui/USAGE.md).
 
+## Documentation
+| Doc | For | Contents |
+|-----|-----|----------|
+| [CLAUDE.md](CLAUDE.md) / [AGENTS.md](AGENTS.md) | LLMs / coding agents | Fast orientation: commands, module map, conventions, gotchas |
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Everyone | Diagrams (context, modules, sequences, data flow) + design rationale |
+| [docs/EXTENDING.md](docs/EXTENDING.md) | Contributors | Step-by-step recipes for adding features |
+| [DlmsSimulatorGui/README.md](DlmsSimulatorGui/README.md) | Developers | Setup, run modes, standalone-EXE build, API reference |
+| [DlmsSimulatorGui/USAGE.md](DlmsSimulatorGui/USAGE.md) | End users | How to operate the running app |
+
 ## Credits & license
 Built on the [Gurux DLMS library](https://github.com/Gurux/Gurux.DLMS.Net)
 (© Gurux Ltd), which is included here under **GPL-2.0-only**. Because this

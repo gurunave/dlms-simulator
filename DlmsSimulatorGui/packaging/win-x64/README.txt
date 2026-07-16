@@ -15,8 +15,15 @@ HOW TO RUN
   open the address it prints (default http://localhost:5000) in a browser.
 
   To use a different port, set ASPNETCORE_URLS first, e.g. in a command prompt:
-       set ASPNETCORE_URLS=http://localhost:8080
+       set ASPNETCORE_URLS=http://0.0.0.0:8080
        DlmsSimulatorGui.Api.exe
+
+NETWORK ACCESS (other machines on the same LAN)
+  The server listens on all interfaces, so other PCs can open:
+       http://<this-pc-ip>:5000
+  The launcher prints the network address(es) on startup. The first time,
+  allow the app through Windows Firewall (choose "Private networks" when
+  prompted, or add an inbound rule for the port).
 
 FOLDER CONTENTS
   DlmsSimulatorGui.Api.exe   The simulator (server + web UI).

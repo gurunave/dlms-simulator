@@ -3,6 +3,18 @@ using DlmsSimulatorGui.Api.Simulator;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Listen on all network interfaces by default so the UI is reachable from other
+// machines on the LAN (http://<this-pc-ip>:5000), not just localhost. This is
+// only applied when the address hasn't been set explicitly, so ASPNETCORE_URLS
+// or --urls still override it.
+bool urlsConfigured =
+    !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("ASPNETCORE_URLS"))
+    || args.Any(a => a.StartsWith("--urls", StringComparison.OrdinalIgnoreCase));
+if (!urlsConfigured)
+{
+    builder.WebHost.UseUrls("http://0.0.0.0:5000");
+}
+
 builder.Services.AddSignalR();
 builder.Services.AddSingleton<MeterManager>();
 builder.Services.AddCors(o => o.AddPolicy("dev", p =>

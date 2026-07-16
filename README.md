@@ -32,13 +32,22 @@ Gurux.DLMS.Net/          Vendored Gurux DLMS library (GPL-2.0) — the GUI build
 ```
 
 ## Download
-Prebuilt **Windows x64** builds are attached to
-[Releases](https://github.com/gurunave/dlms-simulator/releases) — download the
-`DlmsSimulator-win-x64.zip`, unzip, and double-click **`Start DLMS Simulator.cmd`**.
-No .NET or Node install needed.
+Prebuilt standalone builds are attached to
+[Releases](https://github.com/gurunave/dlms-simulator/releases) — no .NET or Node
+install needed:
+
+| Platform | Asset | Run |
+|----------|-------|-----|
+| Windows x64 | `DlmsSimulator-win-x64.zip` | double-click **`Start DLMS Simulator.cmd`** |
+| Linux x64 | `DlmsSimulator-linux-x64.tar.gz` | `./start-dlms-simulator.sh` |
+| macOS (Apple Silicon) | `DlmsSimulator-osx-arm64.tar.gz` | `./start-dlms-simulator.sh` |
+| macOS (Intel) | `DlmsSimulator-osx-x64.tar.gz` | `./start-dlms-simulator.sh` |
+
+The UI listens on all network interfaces, so other machines on the same LAN can
+open it at `http://<host-ip>:5000` (allow the port through the firewall).
 
 Releases are produced automatically by GitHub Actions when a version tag is
-pushed (`git tag v1.0.0 && git push origin v1.0.0`).
+pushed (`git tag v1.1.0 && git push origin v1.1.0`).
 
 ## Quick start (from source)
 Prerequisites: **.NET 9 SDK** and **Node.js 18+**.

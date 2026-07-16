@@ -29,6 +29,16 @@ Then open **http://localhost:5100** in your browser.
 > See [README.md](README.md#build-a-standalone-exe) for how to produce the
 > packaged build.
 
+### Open the UI from another computer
+The server listens on all network interfaces, so any PC on the **same network**
+can use the UI — just open `http://<simulator-pc-ip>:5000` in its browser. The
+launcher prints the exact network address(es) on startup.
+
+If another machine can't connect, it's almost always the firewall on the
+simulator PC — allow the app (or the port) for **private/local** networks. The
+meters themselves listen on their own TCP ports too, so DLMS clients on other
+machines can connect to `http://<simulator-pc-ip>:<meter-port>` as well.
+
 ---
 
 ## 2. The screen at a glance

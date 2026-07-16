@@ -28,4 +28,15 @@
     </Compile>
   </ItemGroup>
 
+  <ItemGroup>
+    <!-- Bundle the meter templates into the output so a published EXE is fully
+         self-contained (no source tree needed at runtime). -->
+    <Content Include="..\..\Gurux.DLMS.Net\Gurux.DLMS.Simulator.Net\*.xml"
+             Link="templates\%(Filename)%(Extension)"
+             CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\..\Gurux.DLMS.Net\Gurux.DLMS.Simulator.Net\Templates\*.xml"
+             Link="templates\%(Filename)%(Extension)"
+             CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
 </Project>

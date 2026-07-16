@@ -9,7 +9,13 @@ For architecture and developer setup, see [README.md](README.md).
 
 ## 1. Start the app
 
-You need the meter engine (backend) running. From `DlmsSimulatorGui/backend`:
+**Option A — packaged build (easiest, nothing to install).**
+If you have the standalone Windows build (`dist/win-x64/`), just double-click
+**`Start DLMS Simulator.cmd`**. It launches the server and opens your browser at
+**http://localhost:5000**. To stop, close the console window.
+
+**Option B — from source.** You need the meter engine (backend) running. From
+`DlmsSimulatorGui/backend`:
 
 ```bash
 dotnet run --urls http://localhost:5100
@@ -17,8 +23,11 @@ dotnet run --urls http://localhost:5100
 
 Then open **http://localhost:5100** in your browser.
 
-> First launch seeds a set of ready-made meter templates automatically, so you
+> First launch loads a set of ready-made meter templates automatically, so you
 > can create a meter straight away.
+>
+> See [README.md](README.md#build-a-standalone-exe) for how to produce the
+> packaged build.
 
 ---
 

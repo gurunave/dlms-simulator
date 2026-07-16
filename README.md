@@ -45,6 +45,18 @@ dotnet run --urls http://localhost:5100
 ```
 Open **http://localhost:5100**.
 
+### Prefer a standalone executable?
+Build a self-contained Windows EXE (bundles the .NET runtime, UI, and templates —
+no install needed to run it):
+```bash
+cd DlmsSimulatorGui/frontend && npm install && npm run build
+cd ../backend && dotnet publish DlmsSimulatorGui.Api.csproj -c Release -r win-x64 \
+  --self-contained true -p:PublishSingleFile=true \
+  -p:IncludeNativeLibrariesForSelfExtract=true -o ../dist/win-x64
+```
+Then run `dist/win-x64/DlmsSimulatorGui.Api.exe` (default http://localhost:5000).
+Details and other platforms: [DlmsSimulatorGui/README.md](DlmsSimulatorGui/README.md#build-a-standalone-exe).
+
 For hot-reload development (UI on :5173 proxying to the backend), see
 [DlmsSimulatorGui/README.md](DlmsSimulatorGui/README.md). For how to operate the
 simulator, see [DlmsSimulatorGui/USAGE.md](DlmsSimulatorGui/USAGE.md).

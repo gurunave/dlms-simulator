@@ -72,6 +72,37 @@ cd ../backend && dotnet run --urls http://localhost:5100
 ```
 Open http://localhost:5100.
 
+## Build a standalone EXE
+Produce a self-contained Windows executable that bundles the .NET runtime, the
+web UI, and the meter templates — no .NET install needed on the target machine.
+
+```bash
+# 1) Build the UI so it is bundled into the exe
+cd frontend && npm run build
+
+# 2) Publish a single-file, self-contained win-x64 build
+cd ../backend
+dotnet publish DlmsSimulatorGui.Api.csproj -c Release -r win-x64 --self-contained true \
+  -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true \
+  -p:EnableCompressionInSingleFile=true -o ../dist/win-x64
+```
+
+The output in `dist/win-x64/` contains `DlmsSimulatorGui.Api.exe` plus its
+`wwwroot/` and `templates/` folders. Run the exe (default
+`http://localhost:5000`) or set `ASPNETCORE_URLS` to choose a port:
+
+```bash
+set ASPNETCORE_URLS=http://localhost:8080
+DlmsSimulatorGui.Api.exe
+```
+
+> Swap `-r win-x64` for `linux-x64` or `osx-arm64` to target other platforms.
+> Drop `--self-contained true` (and the single-file flags) for a small
+> framework-dependent build that needs .NET 9 installed.
+
+The `.csproj` copies the Gurux templates into the build output
+(`CopyToOutputDirectory`), so the published exe is fully portable.
+
 ## Verify with a real DLMS client
 With a meter running (e.g. port 4061):
 ```bash

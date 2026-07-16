@@ -1,9 +1,11 @@
 name: Release
 
 # Build self-contained standalone builds for Windows, Linux, and macOS.
-# On a version tag push, all builds are attached to a single GitHub Release.
+# All four targets are cross-compiled on Linux runners (dotnet can publish any
+# RID from any host), which avoids the slow/queued macOS + Windows hosted
+# runners. On a version tag push, every build is attached to one GitHub Release.
 #
-#   git tag v1.1.0 && git push origin v1.1.0
+#   git tag v1.2.0 && git push origin v1.2.0
 #
 # Runs on manual dispatch too (produces downloadable build artifacts only).
 
@@ -22,11 +24,11 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - { os: windows-latest, rid: win-x64,   name: win-x64 }
-          - { os: ubuntu-latest,  rid: linux-x64, name: linux-x64 }
-          - { os: macos-latest,   rid: osx-arm64, name: osx-arm64 }
-          - { os: macos-13,       rid: osx-x64,   name: osx-x64 }
-    runs-on: ${{ matrix.os }}
+          - { rid: win-x64,   name: win-x64,   kind: windows }
+          - { rid: linux-x64, name: linux-x64, kind: unix }
+          - { rid: osx-arm64, name: osx-arm64, kind: unix }
+          - { rid: osx-x64,   name: osx-x64,   kind: unix }
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -49,46 +51,29 @@ jobs:
           npm ci
           npm run build
 
-      - name: Publish simulator (${{ matrix.rid }})
-        working-directory: DlmsSimulatorGui/backend
-        shell: bash
-        run: >
-          dotnet publish DlmsSimulatorGui.Api.csproj -c Release -r ${{ matrix.rid }}
-          --self-contained true
-          -p:PublishSingleFile=true
-          -p:IncludeNativeLibrariesForSelfExtract=true
-          -p:EnableCompressionInSingleFile=true
-          -p:GeneratePackageOnBuild=false
-          -o "$GITHUB_WORKSPACE/dist/${{ matrix.name }}"
-
-      - name: Publish DlmsProbe test client (${{ matrix.rid }})
-        working-directory: DlmsSimulatorGui/tools/DlmsProbe
-        shell: bash
-        run: >
-          dotnet publish DlmsProbe.csproj -c Release -r ${{ matrix.rid }}
-          --self-contained true
-          -p:PublishSingleFile=true
-          -p:IncludeNativeLibrariesForSelfExtract=true
-          -p:EnableCompressionInSingleFile=true
-          -p:GeneratePackageOnBuild=false
-          -o "$GITHUB_WORKSPACE/dist/${{ matrix.name }}/tools"
-
-      - name: Package (Windows)
-        if: runner.os == 'Windows'
-        shell: pwsh
+      - name: Publish simulator + probe (${{ matrix.rid }})
         run: |
-          Copy-Item "DlmsSimulatorGui/packaging/win-x64/*" "dist/${{ matrix.name }}/" -Force
-          Remove-Item "dist/${{ matrix.name }}/*.pdb","dist/${{ matrix.name }}/tools/*.pdb","dist/${{ matrix.name }}/web.config" -Force -ErrorAction SilentlyContinue
-          Compress-Archive -Path "dist/${{ matrix.name }}/*" -DestinationPath "DlmsSimulator-${{ matrix.name }}.zip" -CompressionLevel Optimal
+          set -e
+          DEST="$GITHUB_WORKSPACE/dist/${{ matrix.name }}"
+          COMMON="-c Release -r ${{ matrix.rid }} --self-contained true \
+            -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true \
+            -p:EnableCompressionInSingleFile=true -p:GeneratePackageOnBuild=false"
+          dotnet publish DlmsSimulatorGui/backend/DlmsSimulatorGui.Api.csproj $COMMON -o "$DEST"
+          dotnet publish DlmsSimulatorGui/tools/DlmsProbe/DlmsProbe.csproj  $COMMON -o "$DEST/tools"
 
-      - name: Package (Linux / macOS)
-        if: runner.os != 'Windows'
-        shell: bash
+      - name: Package
         run: |
-          cp DlmsSimulatorGui/packaging/unix/* "dist/${{ matrix.name }}/"
-          rm -f "dist/${{ matrix.name }}"/*.pdb "dist/${{ matrix.name }}"/tools/*.pdb "dist/${{ matrix.name }}/web.config" || true
-          chmod +x "dist/${{ matrix.name }}/DlmsSimulatorGui.Api" "dist/${{ matrix.name }}/start-dlms-simulator.sh" "dist/${{ matrix.name }}/tools/DlmsProbe" || true
-          tar -C dist -czf "DlmsSimulator-${{ matrix.name }}.tar.gz" "${{ matrix.name }}"
+          set -e
+          DEST="dist/${{ matrix.name }}"
+          rm -f "$DEST"/*.pdb "$DEST"/tools/*.pdb "$DEST/web.config" || true
+          if [ "${{ matrix.kind }}" = "windows" ]; then
+            cp DlmsSimulatorGui/packaging/win-x64/* "$DEST/"
+            ( cd "$DEST" && zip -r -q "$GITHUB_WORKSPACE/DlmsSimulator-${{ matrix.name }}.zip" . )
+          else
+            cp DlmsSimulatorGui/packaging/unix/* "$DEST/"
+            chmod +x "$DEST/DlmsSimulatorGui.Api" "$DEST/start-dlms-simulator.sh" "$DEST/tools/DlmsProbe" || true
+            tar -C dist -czf "DlmsSimulator-${{ matrix.name }}.tar.gz" "${{ matrix.name }}"
+          fi
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4

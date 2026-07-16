@@ -23,6 +23,11 @@ DlmsSimulatorGui/dist/
 # ---- Claude Code local config ----
 .claude/
 
+# ---- graphify: keep the graph outputs, drop machine-specific state + caches ----
+graphify-out/.graphify_*
+graphify-out/cache/
+DlmsSimulatorGui/graphify-out/
+
 # ---- Vendored Gurux: keep only the library + simulator, drop unused examples ----
 Gurux.DLMS.Net/Gurux.DLMS.Client.Example.Net/
 Gurux.DLMS.Net/Gurux.DLMS.Client.Example.VB/

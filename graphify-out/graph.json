@@ -1,0 +1,2827 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "simulator_backend_core",
+        "label": "Simulator Backend Core",
+        "nodes": [
+          "backend_simmeter",
+          "backend_metermanager",
+          "backend_simulatorhub"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.95,
+        "source_file": "README.md"
+      },
+      {
+        "id": "dlms_communication_flow",
+        "label": "DLMS Communication Flow",
+        "nodes": [
+          "tools_dlmsprobe",
+          "backend_simmeter",
+          "frontend_react_ui"
+        ],
+        "relation": "form",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "README.md"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "DlmsSimulatorGui.Api.csproj",
+      "file_type": "code",
+      "source_file": "backend/DlmsSimulatorGui.Api.csproj",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "backend_dlmssimulatorgui_api",
+      "community": 4,
+      "norm_label": "dlmssimulatorgui.api.csproj"
+    },
+    {
+      "label": "net9.0",
+      "file_type": "concept",
+      "source_file": "backend/DlmsSimulatorGui.Api.csproj",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "backend_dlmssimulatorgui_api_csproj_framework_net9_0",
+      "community": 4,
+      "norm_label": "net9.0"
+    },
+    {
+      "label": "Gurux.Net (8.4.2503.1001)",
+      "file_type": "code",
+      "source_file": "backend/DlmsSimulatorGui.Api.csproj",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "backend_dlmssimulatorgui_api_csproj_nuget_gurux_net",
+      "community": 4,
+      "norm_label": "gurux.net (8.4.2503.1001)"
+    },
+    {
+      "label": "Gurux.Serial (8.4.2503.603)",
+      "file_type": "code",
+      "source_file": "backend/DlmsSimulatorGui.Api.csproj",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "backend_dlmssimulatorgui_api_csproj_nuget_gurux_serial",
+      "community": 4,
+      "norm_label": "gurux.serial (8.4.2503.603)"
+    },
+    {
+      "label": "Gurux.DLMS.Net.csproj",
+      "file_type": "code",
+      "source_file": "E:/CLAUDEPROJECTS/DLMS Simulator/Gurux.DLMS.Net/Development/Gurux.DLMS.Net.csproj",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "e_claudeprojects_dlms_simulator_gurux_dlms_net_development_gurux_dlms_net_csproj",
+      "community": 4,
+      "norm_label": "gurux.dlms.net.csproj"
+    },
+    {
+      "label": "Microsoft.NET.Sdk.Web",
+      "file_type": "concept",
+      "source_file": "backend/DlmsSimulatorGui.Api.csproj",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "sdk_microsoft_net_sdk_web",
+      "community": 4,
+      "norm_label": "microsoft.net.sdk.web"
+    },
+    {
+      "label": "SimulatorHub.cs",
+      "file_type": "code",
+      "source_file": "backend/Hubs/SimulatorHub.cs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hubs_simulatorhub",
+      "community": 6,
+      "norm_label": "simulatorhub.cs"
+    },
+    {
+      "label": "SimulatorHub",
+      "file_type": "code",
+      "source_file": "backend/Hubs/SimulatorHub.cs",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "hubs_simulatorhub_simulatorhub",
+      "community": 6,
+      "norm_label": "simulatorhub"
+    },
+    {
+      "label": "Hub",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "hub",
+      "community": 6,
+      "norm_label": "hub"
+    },
+    {
+      "label": "Program.cs",
+      "file_type": "code",
+      "source_file": "backend/Program.cs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "backend_program",
+      "community": 6,
+      "norm_label": "program.cs"
+    },
+    {
+      "label": "MeterManager.cs",
+      "file_type": "code",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "simulator_metermanager",
+      "community": 0,
+      "norm_label": "metermanager.cs"
+    },
+    {
+      "label": "MeterManager",
+      "file_type": "code",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "simulator_metermanager_metermanager",
+      "community": 0,
+      "norm_label": "metermanager"
+    },
+    {
+      "label": "IDisposable",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "idisposable",
+      "community": 0,
+      "norm_label": "idisposable"
+    },
+    {
+      "label": "Instance",
+      "file_type": "code",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "simulator_metermanager_instance",
+      "community": 0,
+      "norm_label": "instance"
+    },
+    {
+      "label": "string",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "string",
+      "community": 0,
+      "norm_label": "string"
+    },
+    {
+      "label": "GXNet",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "gxnet",
+      "community": 0,
+      "norm_label": "gxnet"
+    },
+    {
+      "label": "MeterStatus",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "meterstatus",
+      "community": 0,
+      "norm_label": "meterstatus"
+    },
+    {
+      "label": "int",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "int",
+      "community": 0,
+      "norm_label": "int"
+    },
+    {
+      "label": "ConcurrentDictionary",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "concurrentdictionary",
+      "community": 0,
+      "norm_label": "concurrentdictionary"
+    },
+    {
+      "label": "IHubContext",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "ihubcontext",
+      "community": 0,
+      "norm_label": "ihubcontext"
+    },
+    {
+      "label": "ILogger",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "ilogger",
+      "community": 0,
+      "norm_label": "ilogger"
+    },
+    {
+      "label": ".ListTemplates()",
+      "file_type": "code",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "simulator_metermanager_metermanager_listtemplates",
+      "community": 0,
+      "norm_label": ".listtemplates()"
+    },
+    {
+      "label": "IEnumerable",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "ienumerable",
+      "community": 0,
+      "norm_label": "ienumerable"
+    },
+    {
+      "label": ".ResolveTemplatePath()",
+      "file_type": "code",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "simulator_metermanager_metermanager_resolvetemplatepath",
+      "community": 5,
+      "norm_label": ".resolvetemplatepath()"
+    },
+    {
+      "label": ".List()",
+      "file_type": "code",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "simulator_metermanager_metermanager_list",
+      "community": 0,
+      "norm_label": ".list()"
+    },
+    {
+      "label": ".Get()",
+      "file_type": "code",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "simulator_metermanager_metermanager_get",
+      "community": 0,
+      "norm_label": ".get()"
+    },
+    {
+      "label": ".Create()",
+      "file_type": "code",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "simulator_metermanager_metermanager_create",
+      "community": 0,
+      "norm_label": ".create()"
+    },
+    {
+      "label": ".Start()",
+      "file_type": "code",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L93",
+      "_origin": "ast",
+      "id": "simulator_metermanager_metermanager_start",
+      "community": 0,
+      "norm_label": ".start()"
+    },
+    {
+      "label": ".Stop()",
+      "file_type": "code",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L137",
+      "_origin": "ast",
+      "id": "simulator_metermanager_metermanager_stop",
+      "community": 0,
+      "norm_label": ".stop()"
+    },
+    {
+      "label": ".Delete()",
+      "file_type": "code",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L152",
+      "_origin": "ast",
+      "id": "simulator_metermanager_metermanager_delete",
+      "community": 0,
+      "norm_label": ".delete()"
+    },
+    {
+      "label": ".GetObjects()",
+      "file_type": "code",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L165",
+      "_origin": "ast",
+      "id": "simulator_metermanager_metermanager_getobjects",
+      "community": 5,
+      "norm_label": ".getobjects()"
+    },
+    {
+      "label": "List",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "list",
+      "community": 5,
+      "norm_label": "list"
+    },
+    {
+      "label": ".SetAttribute()",
+      "file_type": "code",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L213",
+      "_origin": "ast",
+      "id": "simulator_metermanager_metermanager_setattribute",
+      "community": 5,
+      "norm_label": ".setattribute()"
+    },
+    {
+      "label": ".ConvertValue()",
+      "file_type": "code",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L253",
+      "_origin": "ast",
+      "id": "simulator_metermanager_metermanager_convertvalue",
+      "community": 5,
+      "norm_label": ".convertvalue()"
+    },
+    {
+      "label": ".OnAccessed()",
+      "file_type": "code",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L290",
+      "_origin": "ast",
+      "id": "simulator_metermanager_metermanager_onaccessed",
+      "community": 7,
+      "norm_label": ".onaccessed()"
+    },
+    {
+      "label": ".OnClient()",
+      "file_type": "code",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L303",
+      "_origin": "ast",
+      "id": "simulator_metermanager_metermanager_onclient",
+      "community": 0,
+      "norm_label": ".onclient()"
+    },
+    {
+      "label": ".BroadcastStatus()",
+      "file_type": "code",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L321",
+      "_origin": "ast",
+      "id": "simulator_metermanager_metermanager_broadcaststatus",
+      "community": 0,
+      "norm_label": ".broadcaststatus()"
+    },
+    {
+      "label": ".Push()",
+      "file_type": "code",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L324",
+      "_origin": "ast",
+      "id": "simulator_metermanager_metermanager_push",
+      "community": 7,
+      "norm_label": ".push()"
+    },
+    {
+      "label": ".Require()",
+      "file_type": "code",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L329",
+      "_origin": "ast",
+      "id": "simulator_metermanager_metermanager_require",
+      "community": 5,
+      "norm_label": ".require()"
+    },
+    {
+      "label": ".SafeClose()",
+      "file_type": "code",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L332",
+      "_origin": "ast",
+      "id": "simulator_metermanager_metermanager_safeclose",
+      "community": 0,
+      "norm_label": ".safeclose()"
+    },
+    {
+      "label": ".ToInfo()",
+      "file_type": "code",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L340",
+      "_origin": "ast",
+      "id": "simulator_metermanager_metermanager_toinfo",
+      "community": 0,
+      "norm_label": ".toinfo()"
+    },
+    {
+      "label": ".Dispose()",
+      "file_type": "code",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L355",
+      "_origin": "ast",
+      "id": "simulator_metermanager_metermanager_dispose",
+      "community": 0,
+      "norm_label": ".dispose()"
+    },
+    {
+      "label": "Models.cs",
+      "file_type": "code",
+      "source_file": "backend/Simulator/Models.cs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "simulator_models",
+      "community": 5,
+      "norm_label": "models.cs"
+    },
+    {
+      "label": "CreateMeterRequest",
+      "file_type": "code",
+      "source_file": "backend/Simulator/Models.cs",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "simulator_models_createmeterrequest",
+      "community": 5,
+      "norm_label": "createmeterrequest"
+    },
+    {
+      "label": "MeterInfo",
+      "file_type": "code",
+      "source_file": "backend/Simulator/Models.cs",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "simulator_models_meterinfo",
+      "community": 0,
+      "norm_label": "meterinfo"
+    },
+    {
+      "label": "CosemAttributeDto",
+      "file_type": "code",
+      "source_file": "backend/Simulator/Models.cs",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "simulator_models_cosemattributedto",
+      "community": 5,
+      "norm_label": "cosemattributedto"
+    },
+    {
+      "label": "CosemObjectDto",
+      "file_type": "code",
+      "source_file": "backend/Simulator/Models.cs",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "simulator_models_cosemobjectdto",
+      "community": 5,
+      "norm_label": "cosemobjectdto"
+    },
+    {
+      "label": "SetAttributeRequest",
+      "file_type": "code",
+      "source_file": "backend/Simulator/Models.cs",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "simulator_models_setattributerequest",
+      "community": 5,
+      "norm_label": "setattributerequest"
+    },
+    {
+      "label": "ActivityEvent",
+      "file_type": "code",
+      "source_file": "backend/Simulator/Models.cs",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "simulator_models_activityevent",
+      "community": 7,
+      "norm_label": "activityevent"
+    },
+    {
+      "label": "SimMeter.cs",
+      "file_type": "code",
+      "source_file": "backend/Simulator/SimMeter.cs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "simulator_simmeter",
+      "community": 3,
+      "norm_label": "simmeter.cs"
+    },
+    {
+      "label": "Gurux.DLMS.Simulator.Net",
+      "file_type": "code",
+      "source_file": "backend/Simulator/SimMeter.cs",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "simulator_simmeter_gurux_dlms_simulator_net",
+      "community": 3,
+      "norm_label": "gurux.dlms.simulator.net"
+    },
+    {
+      "label": "AttributeAccess",
+      "file_type": "code",
+      "source_file": "backend/Simulator/SimMeter.cs",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "simulator_simmeter_attributeaccess",
+      "community": 7,
+      "norm_label": "attributeaccess"
+    },
+    {
+      "label": "SimMeter",
+      "file_type": "code",
+      "source_file": "backend/Simulator/SimMeter.cs",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "simulator_simmeter_simmeter",
+      "community": 3,
+      "norm_label": "simmeter"
+    },
+    {
+      "label": "GXDLMSMeter",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "gxdlmsmeter",
+      "community": 3,
+      "norm_label": "gxdlmsmeter"
+    },
+    {
+      "label": ".PostRead()",
+      "file_type": "code",
+      "source_file": "backend/Simulator/SimMeter.cs",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "simulator_simmeter_simmeter_postread",
+      "community": 3,
+      "norm_label": ".postread()"
+    },
+    {
+      "label": "ValueEventArgs",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "valueeventargs",
+      "community": 3,
+      "norm_label": "valueeventargs"
+    },
+    {
+      "label": ".PostWrite()",
+      "file_type": "code",
+      "source_file": "backend/Simulator/SimMeter.cs",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "simulator_simmeter_simmeter_postwrite",
+      "community": 3,
+      "norm_label": ".postwrite()"
+    },
+    {
+      "label": ".Raise()",
+      "file_type": "code",
+      "source_file": "backend/Simulator/SimMeter.cs",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "simulator_simmeter_simmeter_raise",
+      "community": 3,
+      "norm_label": ".raise()"
+    },
+    {
+      "label": "ValueFormatter",
+      "file_type": "code",
+      "source_file": "backend/Simulator/SimMeter.cs",
+      "source_location": "L75",
+      "_origin": "ast",
+      "id": "simulator_simmeter_valueformatter",
+      "community": 3,
+      "norm_label": "valueformatter"
+    },
+    {
+      "label": ".ToDisplay()",
+      "file_type": "code",
+      "source_file": "backend/Simulator/SimMeter.cs",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "simulator_simmeter_valueformatter_todisplay",
+      "community": 3,
+      "norm_label": ".todisplay()"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "frontend/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_package",
+      "community": 2,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "frontend/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "frontend_package_name",
+      "community": 2,
+      "norm_label": "name"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "frontend/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "frontend_package_private",
+      "community": 2,
+      "norm_label": "private"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "frontend/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "frontend_package_version",
+      "community": 2,
+      "norm_label": "version"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "frontend/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "frontend_package_type",
+      "community": 2,
+      "norm_label": "type"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "frontend/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "frontend_package_scripts",
+      "community": 2,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "frontend/package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "frontend_package_scripts_dev",
+      "community": 2,
+      "norm_label": "dev"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "frontend/package.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "frontend_package_scripts_build",
+      "community": 2,
+      "norm_label": "build"
+    },
+    {
+      "label": "preview",
+      "file_type": "code",
+      "source_file": "frontend/package.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "frontend_package_scripts_preview",
+      "community": 2,
+      "norm_label": "preview"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "frontend/package.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "frontend_package_dependencies",
+      "community": 2,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "@microsoft/signalr",
+      "file_type": "code",
+      "source_file": "frontend/package.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "frontend_package_dependencies_microsoft_signalr",
+      "community": 2,
+      "norm_label": "@microsoft/signalr"
+    },
+    {
+      "label": "react",
+      "file_type": "code",
+      "source_file": "frontend/package.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "frontend_package_dependencies_react",
+      "community": 2,
+      "norm_label": "react"
+    },
+    {
+      "label": "react-dom",
+      "file_type": "code",
+      "source_file": "frontend/package.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "frontend_package_dependencies_react_dom",
+      "community": 2,
+      "norm_label": "react-dom"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "frontend/package.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "frontend_package_devdependencies",
+      "community": 2,
+      "norm_label": "devdependencies"
+    },
+    {
+      "label": "@vitejs/plugin-react",
+      "file_type": "code",
+      "source_file": "frontend/package.json",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "frontend_package_devdependencies_vitejs_plugin_react",
+      "community": 2,
+      "norm_label": "@vitejs/plugin-react"
+    },
+    {
+      "label": "vite",
+      "file_type": "code",
+      "source_file": "frontend/package.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "frontend_package_devdependencies_vite",
+      "community": 2,
+      "norm_label": "vite"
+    },
+    {
+      "label": "App.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_app",
+      "community": 1,
+      "norm_label": "app.jsx"
+    },
+    {
+      "label": "App()",
+      "file_type": "code",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "src_app_app",
+      "community": 1,
+      "norm_label": "app()"
+    },
+    {
+      "label": "api.js",
+      "file_type": "code",
+      "source_file": "frontend/src/api.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_api",
+      "community": 1,
+      "norm_label": "api.js"
+    },
+    {
+      "label": "req()",
+      "file_type": "code",
+      "source_file": "frontend/src/api.js",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "src_api_req",
+      "community": 1,
+      "norm_label": "req()"
+    },
+    {
+      "label": "api",
+      "file_type": "code",
+      "source_file": "frontend/src/api.js",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "src_api_api",
+      "community": 1,
+      "norm_label": "api"
+    },
+    {
+      "label": "ActivityLog.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/components/ActivityLog.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "components_activitylog",
+      "community": 1,
+      "norm_label": "activitylog.jsx"
+    },
+    {
+      "label": "KIND_META",
+      "file_type": "code",
+      "source_file": "frontend/src/components/ActivityLog.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "components_activitylog_kind_meta",
+      "community": 1,
+      "norm_label": "kind_meta"
+    },
+    {
+      "label": "ActivityLog()",
+      "file_type": "code",
+      "source_file": "frontend/src/components/ActivityLog.jsx",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "components_activitylog_activitylog",
+      "community": 1,
+      "norm_label": "activitylog()"
+    },
+    {
+      "label": "CreateMeter.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/components/CreateMeter.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "components_createmeter",
+      "community": 1,
+      "norm_label": "createmeter.jsx"
+    },
+    {
+      "label": "CreateMeter()",
+      "file_type": "code",
+      "source_file": "frontend/src/components/CreateMeter.jsx",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "components_createmeter_createmeter",
+      "community": 1,
+      "norm_label": "createmeter()"
+    },
+    {
+      "label": "MeterList.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/components/MeterList.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "components_meterlist",
+      "community": 1,
+      "norm_label": "meterlist.jsx"
+    },
+    {
+      "label": "MeterList()",
+      "file_type": "code",
+      "source_file": "frontend/src/components/MeterList.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "components_meterlist_meterlist",
+      "community": 1,
+      "norm_label": "meterlist()"
+    },
+    {
+      "label": "ObjectTable.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/components/ObjectTable.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "components_objecttable",
+      "community": 1,
+      "norm_label": "objecttable.jsx"
+    },
+    {
+      "label": "ObjectTable()",
+      "file_type": "code",
+      "source_file": "frontend/src/components/ObjectTable.jsx",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "components_objecttable_objecttable",
+      "community": 1,
+      "norm_label": "objecttable()"
+    },
+    {
+      "label": "main.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/main.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_main",
+      "community": 1,
+      "norm_label": "main.jsx"
+    },
+    {
+      "label": "signalr.js",
+      "file_type": "code",
+      "source_file": "frontend/src/signalr.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_signalr",
+      "community": 1,
+      "norm_label": "signalr.js"
+    },
+    {
+      "label": "connectHub()",
+      "file_type": "code",
+      "source_file": "frontend/src/signalr.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "src_signalr_connecthub",
+      "community": 1,
+      "norm_label": "connecthub()"
+    },
+    {
+      "label": "vite.config.js",
+      "file_type": "code",
+      "source_file": "frontend/vite.config.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_vite_config",
+      "community": 11,
+      "norm_label": "vite.config.js"
+    },
+    {
+      "label": "start-dlms-simulator.sh",
+      "file_type": "code",
+      "source_file": "packaging/unix/start-dlms-simulator.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "unix_start_dlms_simulator",
+      "community": 8,
+      "norm_label": "start-dlms-simulator.sh"
+    },
+    {
+      "label": "start-dlms-simulator.sh script",
+      "file_type": "code",
+      "source_file": "packaging/unix/start-dlms-simulator.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "e_claudeprojects_dlms_simulator_dlmssimulatorgui_packaging_unix_start_dlms_simulator_sh__entry",
+      "community": 8,
+      "norm_label": "start-dlms-simulator.sh script"
+    },
+    {
+      "label": "ASPNETCORE_URLS",
+      "file_type": "code",
+      "source_file": "packaging/unix/start-dlms-simulator.sh",
+      "source_location": "L8",
+      "metadata": {
+        "language": "bash",
+        "kind": "code"
+      },
+      "_origin": "ast",
+      "id": "unix_start_dlms_simulator_aspnetcore_urls",
+      "community": 8,
+      "norm_label": "aspnetcore_urls"
+    },
+    {
+      "label": "DlmsProbe.csproj",
+      "file_type": "code",
+      "source_file": "tools/DlmsProbe/DlmsProbe.csproj",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "dlmsprobe_dlmsprobe",
+      "community": 4,
+      "norm_label": "dlmsprobe.csproj"
+    },
+    {
+      "label": "net9.0",
+      "file_type": "concept",
+      "source_file": "tools/DlmsProbe/DlmsProbe.csproj",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "tools_dlmsprobe_dlmsprobe_csproj_framework_net9_0",
+      "community": 4,
+      "norm_label": "net9.0"
+    },
+    {
+      "label": "Gurux.Net (8.4.2503.1001)",
+      "file_type": "code",
+      "source_file": "tools/DlmsProbe/DlmsProbe.csproj",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "tools_dlmsprobe_dlmsprobe_csproj_nuget_gurux_net",
+      "community": 4,
+      "norm_label": "gurux.net (8.4.2503.1001)"
+    },
+    {
+      "label": "Gurux.Serial (8.4.2503.603)",
+      "file_type": "code",
+      "source_file": "tools/DlmsProbe/DlmsProbe.csproj",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "tools_dlmsprobe_dlmsprobe_csproj_nuget_gurux_serial",
+      "community": 4,
+      "norm_label": "gurux.serial (8.4.2503.603)"
+    },
+    {
+      "label": "Microsoft.NET.Sdk",
+      "file_type": "concept",
+      "source_file": "tools/DlmsProbe/DlmsProbe.csproj",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "sdk_microsoft_net_sdk",
+      "community": 4,
+      "norm_label": "microsoft.net.sdk"
+    },
+    {
+      "label": "Program.cs",
+      "file_type": "code",
+      "source_file": "tools/DlmsProbe/Program.cs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "dlmsprobe_program",
+      "community": 10,
+      "norm_label": "program.cs"
+    },
+    {
+      "label": "DLMS Simulator GUI",
+      "file_type": "document",
+      "source_file": "README.md",
+      "id": "readme_dlms_simulator_gui",
+      "community": 12,
+      "norm_label": "dlms simulator gui"
+    },
+    {
+      "label": "React UI (Vite)",
+      "file_type": "code",
+      "source_file": "frontend/src/main.jsx",
+      "id": "frontend_react_ui",
+      "community": 6,
+      "norm_label": "react ui (vite)"
+    },
+    {
+      "label": "DlmsProbe",
+      "file_type": "code",
+      "source_file": "tools/DlmsProbe/Program.cs",
+      "id": "tools_dlmsprobe",
+      "community": 3,
+      "norm_label": "dlmsprobe"
+    },
+    {
+      "label": "Gurux.DLMS.Net",
+      "file_type": "code",
+      "source_file": null,
+      "id": "gurux_dlms_net",
+      "community": 6,
+      "norm_label": "gurux.dlms.net"
+    },
+    {
+      "label": "GXDLMSMeter",
+      "file_type": "code",
+      "source_file": null,
+      "id": "gurux_gxdlmsmeter",
+      "community": 3,
+      "norm_label": "gxdlmsmeter"
+    },
+    {
+      "label": "COSEM Object",
+      "file_type": "concept",
+      "source_file": "USAGE.md",
+      "id": "concept_cosem_object",
+      "community": 3,
+      "norm_label": "cosem object"
+    },
+    {
+      "label": "SignalR Bridge",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "id": "concept_signalr",
+      "community": 9,
+      "norm_label": "signalr bridge"
+    }
+  ],
+  "links": [
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/DlmsSimulatorGui.Api.csproj",
+      "weight": 1.0,
+      "source": "backend_dlmssimulatorgui_api",
+      "target": "backend_dlmssimulatorgui_api_csproj_framework_net9_0",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/DlmsSimulatorGui.Api.csproj",
+      "weight": 1.0,
+      "source": "backend_dlmssimulatorgui_api",
+      "target": "backend_dlmssimulatorgui_api_csproj_nuget_gurux_net",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/DlmsSimulatorGui.Api.csproj",
+      "weight": 1.0,
+      "source": "backend_dlmssimulatorgui_api",
+      "target": "backend_dlmssimulatorgui_api_csproj_nuget_gurux_serial",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/DlmsSimulatorGui.Api.csproj",
+      "weight": 1.0,
+      "source": "backend_dlmssimulatorgui_api",
+      "target": "e_claudeprojects_dlms_simulator_gurux_dlms_net_development_gurux_dlms_net_csproj",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/DlmsSimulatorGui.Api.csproj",
+      "weight": 1.0,
+      "source": "backend_dlmssimulatorgui_api",
+      "target": "sdk_microsoft_net_sdk_web",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "tools/DlmsProbe/DlmsProbe.csproj",
+      "weight": 1.0,
+      "source": "dlmsprobe_dlmsprobe",
+      "target": "e_claudeprojects_dlms_simulator_gurux_dlms_net_development_gurux_dlms_net_csproj",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Hubs/SimulatorHub.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "hubs_simulatorhub",
+      "target": "hubs_simulatorhub_simulatorhub",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "README.md",
+      "source": "simulator_metermanager_metermanager",
+      "target": "hubs_simulatorhub_simulatorhub"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source": "frontend_react_ui",
+      "target": "hubs_simulatorhub_simulatorhub"
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Hubs/SimulatorHub.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "hubs_simulatorhub_simulatorhub",
+      "target": "hub",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source": "frontend_react_ui",
+      "target": "backend_program"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source": "backend_program",
+      "target": "gurux_dlms_net"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "simulator_metermanager",
+      "target": "simulator_metermanager_instance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "simulator_metermanager",
+      "target": "simulator_metermanager_metermanager",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source": "simulator_metermanager_metermanager",
+      "target": "simulator_simmeter_simmeter"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L31",
+      "weight": 1.0,
+      "context": "field",
+      "source": "simulator_metermanager_metermanager",
+      "target": "concurrentdictionary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager",
+      "target": "idisposable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L32",
+      "weight": 1.0,
+      "context": "field",
+      "source": "simulator_metermanager_metermanager",
+      "target": "ihubcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L33",
+      "weight": 1.0,
+      "context": "field",
+      "source": "simulator_metermanager_metermanager",
+      "target": "ilogger",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L321",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager",
+      "target": "simulator_metermanager_metermanager_broadcaststatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L253",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager",
+      "target": "simulator_metermanager_metermanager_convertvalue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager",
+      "target": "simulator_metermanager_metermanager_create",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L152",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager",
+      "target": "simulator_metermanager_metermanager_delete",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L355",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager",
+      "target": "simulator_metermanager_metermanager_dispose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager",
+      "target": "simulator_metermanager_metermanager_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L165",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager",
+      "target": "simulator_metermanager_metermanager_getobjects",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager",
+      "target": "simulator_metermanager_metermanager_list",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager",
+      "target": "simulator_metermanager_metermanager_listtemplates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L290",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager",
+      "target": "simulator_metermanager_metermanager_onaccessed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L303",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager",
+      "target": "simulator_metermanager_metermanager_onclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L324",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager",
+      "target": "simulator_metermanager_metermanager_push",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L329",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager",
+      "target": "simulator_metermanager_metermanager_require",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager",
+      "target": "simulator_metermanager_metermanager_resolvetemplatepath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L332",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager",
+      "target": "simulator_metermanager_metermanager_safeclose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L213",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager",
+      "target": "simulator_metermanager_metermanager_setattribute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager",
+      "target": "simulator_metermanager_metermanager_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager",
+      "target": "simulator_metermanager_metermanager_stop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L340",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager",
+      "target": "simulator_metermanager_metermanager_toinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L34",
+      "weight": 1.0,
+      "context": "field",
+      "source": "simulator_metermanager_metermanager",
+      "target": "string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L25",
+      "weight": 1.0,
+      "context": "field",
+      "source": "simulator_metermanager_instance",
+      "target": "gxnet",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L27",
+      "weight": 1.0,
+      "context": "field",
+      "source": "simulator_metermanager_instance",
+      "target": "int",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "field",
+      "source": "simulator_metermanager_instance",
+      "target": "meterstatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L23",
+      "weight": 1.0,
+      "context": "field",
+      "source": "simulator_metermanager_instance",
+      "target": "simulator_models_createmeterrequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L24",
+      "weight": 1.0,
+      "context": "field",
+      "source": "simulator_metermanager_instance",
+      "target": "simulator_simmeter_simmeter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L28",
+      "weight": 1.0,
+      "context": "field",
+      "source": "simulator_metermanager_instance",
+      "target": "string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L321",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "simulator_metermanager_metermanager_broadcaststatus",
+      "target": "simulator_metermanager_instance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L329",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "simulator_metermanager_metermanager_require",
+      "target": "simulator_metermanager_instance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L332",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "simulator_metermanager_metermanager_safeclose",
+      "target": "simulator_metermanager_instance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L340",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "simulator_metermanager_metermanager_toinfo",
+      "target": "simulator_metermanager_instance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L48",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "simulator_metermanager_metermanager_listtemplates",
+      "target": "ienumerable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L64",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "simulator_metermanager_metermanager_list",
+      "target": "ienumerable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_create",
+      "target": "simulator_metermanager_metermanager_resolvetemplatepath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L176",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_getobjects",
+      "target": "simulator_metermanager_metermanager_resolvetemplatepath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L243",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_setattribute",
+      "target": "simulator_metermanager_metermanager_resolvetemplatepath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_start",
+      "target": "simulator_metermanager_metermanager_resolvetemplatepath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L64",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "simulator_metermanager_metermanager_list",
+      "target": "simulator_models_meterinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_get",
+      "target": "simulator_metermanager_metermanager_toinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L66",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "simulator_metermanager_metermanager_get",
+      "target": "simulator_models_meterinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_create",
+      "target": "simulator_metermanager_metermanager_toinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L68",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "simulator_metermanager_metermanager_create",
+      "target": "simulator_models_createmeterrequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L68",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "simulator_metermanager_metermanager_create",
+      "target": "simulator_models_meterinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L133",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_start",
+      "target": "simulator_metermanager_metermanager_broadcaststatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L112",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_start",
+      "target": "simulator_metermanager_metermanager_onclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_start",
+      "target": "simulator_metermanager_metermanager_require",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_start",
+      "target": "simulator_metermanager_metermanager_safeclose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_start",
+      "target": "simulator_metermanager_metermanager_toinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L93",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "simulator_metermanager_metermanager_start",
+      "target": "simulator_models_meterinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L147",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_stop",
+      "target": "simulator_metermanager_metermanager_broadcaststatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L139",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_stop",
+      "target": "simulator_metermanager_metermanager_require",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L142",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_stop",
+      "target": "simulator_metermanager_metermanager_safeclose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L149",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_stop",
+      "target": "simulator_metermanager_metermanager_toinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L137",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "simulator_metermanager_metermanager_stop",
+      "target": "simulator_models_meterinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L158",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_delete",
+      "target": "simulator_metermanager_metermanager_safeclose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L165",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "simulator_metermanager_metermanager_getobjects",
+      "target": "list",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_getobjects",
+      "target": "simulator_metermanager_metermanager_require",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L165",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "simulator_metermanager_metermanager_getobjects",
+      "target": "simulator_models_cosemobjectdto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L250",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_setattribute",
+      "target": "simulator_metermanager_metermanager_getobjects",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L234",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_setattribute",
+      "target": "simulator_metermanager_metermanager_convertvalue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L215",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_setattribute",
+      "target": "simulator_metermanager_metermanager_require",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L213",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "simulator_metermanager_metermanager_setattribute",
+      "target": "simulator_models_cosemobjectdto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L213",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "simulator_metermanager_metermanager_setattribute",
+      "target": "simulator_models_setattributerequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L292",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_onaccessed",
+      "target": "simulator_metermanager_metermanager_push",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L290",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "simulator_metermanager_metermanager_onaccessed",
+      "target": "simulator_simmeter_attributeaccess",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L311",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_onclient",
+      "target": "simulator_metermanager_metermanager_broadcaststatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L313",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_onclient",
+      "target": "simulator_metermanager_metermanager_push",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L322",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_broadcaststatus",
+      "target": "simulator_metermanager_metermanager_toinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L324",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "simulator_metermanager_metermanager_push",
+      "target": "simulator_models_activityevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L359",
+      "weight": 1.0,
+      "source": "simulator_metermanager_metermanager_dispose",
+      "target": "simulator_metermanager_metermanager_safeclose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/MeterManager.cs",
+      "source_location": "L340",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "simulator_metermanager_metermanager_toinfo",
+      "target": "simulator_models_meterinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/Models.cs",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "simulator_models",
+      "target": "simulator_models_activityevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/Models.cs",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "simulator_models",
+      "target": "simulator_models_cosemattributedto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/Models.cs",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "simulator_models",
+      "target": "simulator_models_cosemobjectdto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/Models.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "simulator_models",
+      "target": "simulator_models_createmeterrequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/Models.cs",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "simulator_models",
+      "target": "simulator_models_meterinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/Models.cs",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "simulator_models",
+      "target": "simulator_models_setattributerequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/SimMeter.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "simulator_simmeter",
+      "target": "simulator_simmeter_attributeaccess",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/SimMeter.cs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "simulator_simmeter",
+      "target": "simulator_simmeter_gurux_dlms_simulator_net",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/SimMeter.cs",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "simulator_simmeter",
+      "target": "simulator_simmeter_simmeter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/SimMeter.cs",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "simulator_simmeter",
+      "target": "simulator_simmeter_valueformatter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "USAGE.md",
+      "source": "simulator_simmeter_simmeter",
+      "target": "concept_cosem_object"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source": "simulator_simmeter_simmeter",
+      "target": "gurux_gxdlmsmeter"
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/SimMeter.cs",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "simulator_simmeter_simmeter",
+      "target": "gxdlmsmeter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/SimMeter.cs",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "simulator_simmeter_simmeter",
+      "target": "simulator_simmeter_simmeter_postread",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/SimMeter.cs",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "simulator_simmeter_simmeter",
+      "target": "simulator_simmeter_simmeter_postwrite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/SimMeter.cs",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "simulator_simmeter_simmeter",
+      "target": "simulator_simmeter_simmeter_raise",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "USAGE.md",
+      "source": "tools_dlmsprobe",
+      "target": "simulator_simmeter_simmeter"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/SimMeter.cs",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "simulator_simmeter_simmeter_postread",
+      "target": "simulator_simmeter_simmeter_raise",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/SimMeter.cs",
+      "source_location": "L37",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "simulator_simmeter_simmeter_postread",
+      "target": "valueeventargs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/SimMeter.cs",
+      "source_location": "L43",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "simulator_simmeter_simmeter_postwrite",
+      "target": "valueeventargs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/SimMeter.cs",
+      "source_location": "L49",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "simulator_simmeter_simmeter_raise",
+      "target": "valueeventargs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/SimMeter.cs",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "simulator_simmeter_simmeter_postwrite",
+      "target": "simulator_simmeter_simmeter_raise",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/SimMeter.cs",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "simulator_simmeter_simmeter_raise",
+      "target": "simulator_simmeter_valueformatter_todisplay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/Simulator/SimMeter.cs",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "simulator_simmeter_valueformatter",
+      "target": "simulator_simmeter_valueformatter_todisplay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/package.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "frontend_package",
+      "target": "frontend_package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "frontend_package",
+      "target": "frontend_package_devdependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "frontend_package",
+      "target": "frontend_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_package",
+      "target": "frontend_package_private",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_package",
+      "target": "frontend_package_scripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_package",
+      "target": "frontend_package_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "frontend_package",
+      "target": "frontend_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "frontend_package_scripts",
+      "target": "frontend_package_scripts_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "frontend_package_scripts",
+      "target": "frontend_package_scripts_dev",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/package.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "frontend_package_scripts",
+      "target": "frontend_package_scripts_preview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "frontend_package_dependencies",
+      "target": "frontend_package_dependencies_microsoft_signalr",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "frontend_package_dependencies",
+      "target": "frontend_package_dependencies_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "frontend_package_dependencies",
+      "target": "frontend_package_dependencies_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "frontend_package_devdependencies",
+      "target": "frontend_package_devdependencies_vite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "frontend_package_devdependencies",
+      "target": "frontend_package_devdependencies_vitejs_plugin_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "components_activitylog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "components_activitylog_activitylog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "components_createmeter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "components_createmeter_createmeter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "components_meterlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "components_meterlist_meterlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "components_objecttable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "components_objecttable_objecttable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "src_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "src_api_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "src_app_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "src_signalr",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "src_signalr_connecthub",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/main.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_main",
+      "target": "src_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/main.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_main",
+      "target": "src_app_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/CreateMeter.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "components_createmeter",
+      "target": "src_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/ObjectTable.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "components_objecttable",
+      "target": "src_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/api.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "src_api",
+      "target": "src_api_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/api.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_api",
+      "target": "src_api_req",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/CreateMeter.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "components_createmeter",
+      "target": "src_api_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/ObjectTable.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "components_objecttable",
+      "target": "src_api_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/ActivityLog.jsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "components_activitylog",
+      "target": "components_activitylog_activitylog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/ActivityLog.jsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "components_activitylog",
+      "target": "components_activitylog_kind_meta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/CreateMeter.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_createmeter",
+      "target": "components_createmeter_createmeter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/MeterList.jsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "components_meterlist",
+      "target": "components_meterlist_meterlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/ObjectTable.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_objecttable",
+      "target": "components_objecttable_objecttable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/signalr.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_signalr",
+      "target": "src_signalr_connecthub",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packaging/unix/start-dlms-simulator.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "unix_start_dlms_simulator",
+      "target": "e_claudeprojects_dlms_simulator_dlmssimulatorgui_packaging_unix_start_dlms_simulator_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "packaging/unix/start-dlms-simulator.sh",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "unix_start_dlms_simulator",
+      "target": "unix_start_dlms_simulator_aspnetcore_urls",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "tools/DlmsProbe/DlmsProbe.csproj",
+      "weight": 1.0,
+      "source": "dlmsprobe_dlmsprobe",
+      "target": "sdk_microsoft_net_sdk",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "tools/DlmsProbe/DlmsProbe.csproj",
+      "weight": 1.0,
+      "source": "dlmsprobe_dlmsprobe",
+      "target": "tools_dlmsprobe_dlmsprobe_csproj_framework_net9_0",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "tools/DlmsProbe/DlmsProbe.csproj",
+      "weight": 1.0,
+      "source": "dlmsprobe_dlmsprobe",
+      "target": "tools_dlmsprobe_dlmsprobe_csproj_nuget_gurux_net",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "tools/DlmsProbe/DlmsProbe.csproj",
+      "weight": 1.0,
+      "source": "dlmsprobe_dlmsprobe",
+      "target": "tools_dlmsprobe_dlmsprobe_csproj_nuget_gurux_serial",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "simulator_backend_core",
+      "label": "Simulator Backend Core",
+      "nodes": [
+        "backend_simmeter",
+        "backend_metermanager",
+        "backend_simulatorhub"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "README.md"
+    },
+    {
+      "id": "dlms_communication_flow",
+      "label": "DLMS Communication Flow",
+      "nodes": [
+        "tools_dlmsprobe",
+        "backend_simmeter",
+        "frontend_react_ui"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "README.md"
+    }
+  ],
+  "built_at_commit": "90fb4c6691ffa58eef872b79731d65ab33c64303"
+}

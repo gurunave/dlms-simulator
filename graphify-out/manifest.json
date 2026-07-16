@@ -1,0 +1,127 @@
+{
+  "backend/DlmsSimulatorGui.Api.csproj": {
+    "mtime": 1784216932.304684,
+    "ast_hash": "c071e3d8f8eecc07b5504e04ed8740cd",
+    "semantic_hash": "c071e3d8f8eecc07b5504e04ed8740cd"
+  },
+  "backend/Hubs/SimulatorHub.cs": {
+    "mtime": 1784213279.1272647,
+    "ast_hash": "af92b6715c81ebcb5fc11327af368095",
+    "semantic_hash": "af92b6715c81ebcb5fc11327af368095"
+  },
+  "backend/Program.cs": {
+    "mtime": 1784218150.4765332,
+    "ast_hash": "253122a356c42b371bc2a5619832c15f",
+    "semantic_hash": "253122a356c42b371bc2a5619832c15f"
+  },
+  "backend/Simulator/MeterManager.cs": {
+    "mtime": 1784213406.4211428,
+    "ast_hash": "71855c76b096b90d7af64a4d0a166478",
+    "semantic_hash": "71855c76b096b90d7af64a4d0a166478"
+  },
+  "backend/Simulator/Models.cs": {
+    "mtime": 1784213272.0786066,
+    "ast_hash": "0eb99b2a2fe41120a1203482b035e577",
+    "semantic_hash": "0eb99b2a2fe41120a1203482b035e577"
+  },
+  "backend/Simulator/SimMeter.cs": {
+    "mtime": 1784213252.1039865,
+    "ast_hash": "05a4f40614f9a2cdd2c8342c66c7fb74",
+    "semantic_hash": "05a4f40614f9a2cdd2c8342c66c7fb74"
+  },
+  "frontend/package.json": {
+    "mtime": 1784213644.357127,
+    "ast_hash": "9eec07a806a242233aad8f3a99215945",
+    "semantic_hash": "9eec07a806a242233aad8f3a99215945"
+  },
+  "frontend/src/App.jsx": {
+    "mtime": 1784213694.1715353,
+    "ast_hash": "e09d60f8df2f7ae2b6b07b869a1eeca4",
+    "semantic_hash": "e09d60f8df2f7ae2b6b07b869a1eeca4"
+  },
+  "frontend/src/api.js": {
+    "mtime": 1784213664.8005686,
+    "ast_hash": "43d7c0d5ce3f0cb0601a7171685b8fb1",
+    "semantic_hash": "43d7c0d5ce3f0cb0601a7171685b8fb1"
+  },
+  "frontend/src/components/ActivityLog.jsx": {
+    "mtime": 1784213746.335439,
+    "ast_hash": "ea4b731f1023d2d29e8f08f745a97110",
+    "semantic_hash": "ea4b731f1023d2d29e8f08f745a97110"
+  },
+  "frontend/src/components/CreateMeter.jsx": {
+    "mtime": 1784213706.9233377,
+    "ast_hash": "bfbb70fac50737d3685f698f97c55205",
+    "semantic_hash": "bfbb70fac50737d3685f698f97c55205"
+  },
+  "frontend/src/components/MeterList.jsx": {
+    "mtime": 1784213715.92297,
+    "ast_hash": "37508d18926f869fd451e46ef4905673",
+    "semantic_hash": "37508d18926f869fd451e46ef4905673"
+  },
+  "frontend/src/components/ObjectTable.jsx": {
+    "mtime": 1784213736.3322227,
+    "ast_hash": "2e705716c400b5884100614d1b1576cf",
+    "semantic_hash": "2e705716c400b5884100614d1b1576cf"
+  },
+  "frontend/src/main.jsx": {
+    "mtime": 1784213675.8505034,
+    "ast_hash": "b7d304325a4ea8146c21d7364e431386",
+    "semantic_hash": "b7d304325a4ea8146c21d7364e431386"
+  },
+  "frontend/src/signalr.js": {
+    "mtime": 1784213672.2578192,
+    "ast_hash": "f833d38c312dc9a4b516c1b74b2407cd",
+    "semantic_hash": "f833d38c312dc9a4b516c1b74b2407cd"
+  },
+  "frontend/vite.config.js": {
+    "mtime": 1784213650.0554693,
+    "ast_hash": "1452043f8d6d7a842e6fedcfca93c64c",
+    "semantic_hash": "1452043f8d6d7a842e6fedcfca93c64c"
+  },
+  "packaging/unix/start-dlms-simulator.sh": {
+    "mtime": 1784218169.2081513,
+    "ast_hash": "d03c461637eb7a38cec3429e3dadca65",
+    "semantic_hash": "d03c461637eb7a38cec3429e3dadca65"
+  },
+  "tools/DlmsProbe/DlmsProbe.csproj": {
+    "mtime": 1784214136.3367255,
+    "ast_hash": "2c3f828bf7910441fb6d96e31b296259",
+    "semantic_hash": "2c3f828bf7910441fb6d96e31b296259"
+  },
+  "tools/DlmsProbe/Program.cs": {
+    "mtime": 1784214181.9358473,
+    "ast_hash": "9721f5de131be3d998898835a705c9b4",
+    "semantic_hash": "9721f5de131be3d998898835a705c9b4"
+  },
+  "README.md": {
+    "mtime": 1784218498.0945103,
+    "ast_hash": "a6b8fabe4c6f2257840e058485d203bd",
+    "semantic_hash": "a6b8fabe4c6f2257840e058485d203bd"
+  },
+  "USAGE.md": {
+    "mtime": 1784218528.7487888,
+    "ast_hash": "6eb9f215e52b8cdc2ca055702bc996da",
+    "semantic_hash": "6eb9f215e52b8cdc2ca055702bc996da"
+  },
+  "frontend/index.html": {
+    "mtime": 1784213655.5065916,
+    "ast_hash": "c15b6c023be0280317593ac5206ab8e9",
+    "semantic_hash": "c15b6c023be0280317593ac5206ab8e9"
+  },
+  "packaging/unix/README.txt": {
+    "mtime": 1784218181.775154,
+    "ast_hash": "378695f0cbf55ea2fc02f1a2c998a428",
+    "semantic_hash": "378695f0cbf55ea2fc02f1a2c998a428"
+  },
+  "packaging/win-x64/README.txt": {
+    "mtime": 1784218190.3414102,
+    "ast_hash": "aa984d5cc04eb9a4881b9359fa3794a6",
+    "semantic_hash": "aa984d5cc04eb9a4881b9359fa3794a6"
+  },
+  "tools/DlmsProbe/trace.txt": {
+    "mtime": 1784214200.4891906,
+    "ast_hash": "c58a2decd647f296f07516791e03651c",
+    "semantic_hash": "c58a2decd647f296f07516791e03651c"
+  }
+}

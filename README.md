@@ -93,6 +93,7 @@ simulator, see [DlmsSimulatorGui/USAGE.md](DlmsSimulatorGui/USAGE.md).
 | [docs/EXTENDING.md](docs/EXTENDING.md) | Contributors | Step-by-step recipes for adding features |
 | [DlmsSimulatorGui/README.md](DlmsSimulatorGui/README.md) | Developers | Setup, run modes, standalone-EXE build, API reference |
 | [DlmsSimulatorGui/USAGE.md](DlmsSimulatorGui/USAGE.md) | End users | How to operate the running app |
+| [graphify-out/](graphify-out/) | LLMs / tools | Prebuilt code knowledge graph — `graph.json`, `GRAPH_REPORT.md`, interactive `graph.html` |
 
 ## Credits & license
 Built on the [Gurux DLMS library](https://github.com/Gurux/Gurux.DLMS.Net)

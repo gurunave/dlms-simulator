@@ -4,6 +4,12 @@ This file orients an LLM/coding agent quickly. Read it first, then
 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) and [docs/EXTENDING.md](docs/EXTENDING.md)
 for depth. (Non-Claude tools: see [AGENTS.md](AGENTS.md), which points here.)
 
+> **Knowledge graph available.** `graphify-out/` holds a prebuilt code knowledge
+> graph (`graph.json`, human report `GRAPH_REPORT.md`, interactive `graph.html`).
+> With the graphify skill you can answer questions from it without re-reading files:
+> `graphify query "how does a client read reach the UI?"`. Its god nodes
+> (`MeterManager`, `SimMeter`, `SimulatorHub`, `MeterInfo`) are the core abstractions.
+
 ## What this project is
 A **web GUI for the Gurux DLMS/COSEM meter simulator**. It runs the Gurux DLMS
 library **in-process** (not by shelling out to Gurux's console tool), exposes a

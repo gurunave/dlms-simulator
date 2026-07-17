@@ -17,6 +17,10 @@ public sealed class CreateMeterRequest
     public bool UseLogicalName { get; set; } = true;
     /// <summary>HDLC or WRAPPER.</summary>
     public string Interface { get; set; } = "WRAPPER";
+    /// <summary>DLMS authentication level: None, Low or High.</summary>
+    public string AuthenticationLevel { get; set; } = "None";
+    /// <summary>LLS/HLS secret. ASCII by default, or a "0x"-prefixed hex string. Ignored when level is None.</summary>
+    public string? Password { get; set; }
 }
 
 /// <summary>Summary of a meter for list views.</summary>
@@ -33,6 +37,9 @@ public sealed class MeterInfo
     public int ClientCount { get; set; }
     public int ObjectCount { get; set; }
     public string? Error { get; set; }
+    public string AuthenticationLevel { get; set; } = "None";
+    /// <summary>True when a secret is configured. The secret itself is never exposed.</summary>
+    public bool HasPassword { get; set; }
 }
 
 public sealed class CosemAttributeDto
@@ -62,7 +69,7 @@ public sealed class SetAttributeRequest
 public sealed class ActivityEvent
 {
     public string MeterId { get; set; } = "";
-    public string Kind { get; set; } = ""; // connected | disconnected | read | write | status
+    public string Kind { get; set; } = ""; // connected | disconnected | read | write | status | auth
     public string? Detail { get; set; }
     public string? LogicalName { get; set; }
     public int? Index { get; set; }

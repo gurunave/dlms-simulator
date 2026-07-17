@@ -112,6 +112,8 @@ button.tiny { padding: 4px 8px; font-size: 12px; }
 .meter-name { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .meter-meta { font-size: 11px; color: var(--muted); }
 .meter-meta .clients { color: var(--accent); }
+.meter-meta .auth-badge { color: var(--amber); }
+.meter-meta .auth-badge.open { color: var(--muted); }
 .meter-error { font-size: 11px; color: var(--red); margin-top: 2px; }
 .meter-actions { display: flex; gap: 4px; }
 
@@ -158,6 +160,7 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
 .ev.disconnected { border-left-color: var(--red); }
 .ev.read { border-left-color: var(--accent); }
 .ev.write { border-left-color: var(--amber); }
+.ev.auth { border-left-color: var(--red); }
 .ev-icon { font-size: 14px; }
 .ev-body { min-width: 0; flex: 1; }
 .ev-top { display: flex; justify-content: space-between; gap: 8px; }

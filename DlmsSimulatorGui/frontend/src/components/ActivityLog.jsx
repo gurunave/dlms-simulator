@@ -4,6 +4,7 @@ const KIND_META = {
   read: { icon: '📤', cls: 'read', label: 'Read' },
   write: { icon: '✏️', cls: 'write', label: 'Write' },
   status: { icon: 'ℹ️', cls: 'status', label: 'Status' },
+  auth: { icon: '🔒', cls: 'auth', label: 'Authentication failed' },
 };
 
 export default function ActivityLog({ activity, meters, onClear }) {

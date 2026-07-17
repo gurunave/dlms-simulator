@@ -107,6 +107,7 @@ public sealed class MeterManager : IDisposable
                 {
                     MeterId = id,
                     Accessed = OnAccessed,
+                    AuthFailed = OnAuthFailed,
                 };
                 var net = new GXNet(NetworkType.Tcp, inst.Config.Port) { Server = true };
                 net.OnClientConnected += (_, e) => OnClient(id, e.Info?.ToString() ?? "", true);
@@ -114,6 +115,7 @@ public sealed class MeterManager : IDisposable
 
                 var templatePath = ResolveTemplatePath(inst.Config.Template);
                 meter.Initialize(net, TraceLevel.Error, templatePath, inst.Config.Serial, false, null);
+                ApplySecurity(meter, inst.Config);
 
                 inst.Meter = meter;
                 inst.Net = net;
@@ -285,7 +287,60 @@ public sealed class MeterManager : IDisposable
         }
     }
 
+    // ---- Security ----------------------------------------------------------
+
+    /// <summary>
+    /// Applies the configured authentication level and secret to every
+    /// association object on a freshly initialized meter. Association secrets
+    /// are [XmlIgnore] in Gurux, so they never live in the template file and
+    /// must be set in code on each start.
+    /// </summary>
+    private static void ApplySecurity(SimMeter meter, CreateMeterRequest cfg)
+    {
+        if (!Enum.TryParse<Authentication>(cfg.AuthenticationLevel, ignoreCase: true, out var level))
+        {
+            level = Authentication.None;
+        }
+        var secret = level == Authentication.None ? null : ParseSecret(cfg.Password);
+
+        foreach (GXDLMSObject obj in meter.Items.GetObjects(ObjectType.AssociationLogicalName))
+        {
+            if (obj is GXDLMSAssociationLogicalName ln)
+            {
+                ln.AuthenticationMechanismName.MechanismId = level;
+                if (secret != null)
+                {
+                    ln.Secret = secret;
+                }
+            }
+        }
+        foreach (GXDLMSObject obj in meter.Items.GetObjects(ObjectType.AssociationShortName))
+        {
+            if (obj is GXDLMSAssociationShortName sn && secret != null)
+            {
+                sn.Secret = secret;
+            }
+        }
+    }
+
+    /// <summary>Parses a secret string: "0x"-prefixed = hex, otherwise ASCII.</summary>
+    private static byte[]? ParseSecret(string? pwd)
+    {
+        if (string.IsNullOrEmpty(pwd))
+        {
+            return null;
+        }
+        if (pwd.StartsWith("0x", StringComparison.OrdinalIgnoreCase))
+        {
+            try { return Convert.FromHexString(pwd[2..]); } catch { /* fall through to ASCII */ }
+        }
+        return System.Text.Encoding.ASCII.GetBytes(pwd);
+    }
+
     // ---- Event bridge ------------------------------------------------------
+
+    private void OnAuthFailed(string meterId, string detail) =>
+        Push(new ActivityEvent { MeterId = meterId, Kind = "auth", Detail = detail });
 
     private void OnAccessed(string meterId, AttributeAccess a)
     {
@@ -350,6 +405,8 @@ public sealed class MeterManager : IDisposable
         ClientCount = i.ClientCount,
         ObjectCount = i.Meter?.Items.Count ?? 0,
         Error = i.Error,
+        AuthenticationLevel = i.Config.AuthenticationLevel,
+        HasPassword = !string.IsNullOrEmpty(i.Config.Password),
     };
 
     public void Dispose()

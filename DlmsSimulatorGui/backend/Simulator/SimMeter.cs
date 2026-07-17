@@ -29,9 +29,22 @@ namespace Gurux.DLMS.Simulator.Net
         /// <summary>Raised after a client reads one or more attributes.</summary>
         public Action<string, AttributeAccess>? Accessed { get; set; }
 
+        /// <summary>Raised when a client fails authentication. Args: (meterId, detail).</summary>
+        public Action<string, string>? AuthFailed { get; set; }
+
         public SimMeter(bool logicalNameReferencing, InterfaceType type, bool useUtc2NormalTime, string flagId)
             : base(logicalNameReferencing, type, useUtc2NormalTime, flagId)
         {
+        }
+
+        protected override SourceDiagnostic ValidateAuthentication(Authentication authentication, byte[] password)
+        {
+            var result = base.ValidateAuthentication(authentication, password);
+            if (result != SourceDiagnostic.None)
+            {
+                AuthFailed?.Invoke(MeterId, $"Authentication {authentication} rejected ({result})");
+            }
+            return result;
         }
 
         protected override void PostRead(ValueEventArgs[] args)

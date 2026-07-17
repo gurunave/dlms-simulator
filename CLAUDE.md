@@ -86,7 +86,7 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for diagrams.
 | GET | `/api/templates` | list template XMLs |
 | POST | `/api/templates` | upload a template (multipart, field `file`) |
 | GET | `/api/meters` / `/api/meters/{id}` | list / get meters |
-| POST | `/api/meters` | create `{name,port,serial,template,useLogicalName,interface}` |
+| POST | `/api/meters` | create `{name,port,serial,template,useLogicalName,interface,authenticationLevel,password}` |
 | POST | `/api/meters/{id}/start` \| `/stop` | start / stop |
 | DELETE | `/api/meters/{id}` | delete |
 | GET | `/api/meters/{id}/objects` | COSEM objects + attribute values |

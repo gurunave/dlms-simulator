@@ -16,6 +16,9 @@ export default function MeterList({ meters, selectedId, onSelect, onStart, onSto
                 <div className="meter-name">{m.name}</div>
                 <div className="meter-meta">
                   :{m.port} · SN {m.serial} · {m.interface}
+                  {m.authenticationLevel && m.authenticationLevel !== 'None'
+                    ? <span className="auth-badge" title={`Authentication: ${m.authenticationLevel}`}> · 🔒 {m.authenticationLevel}</span>
+                    : <span className="auth-badge open" title="No authentication"> · 🔓 Open</span>}
                   {m.clientCount > 0 && <span className="clients"> · {m.clientCount} client{m.clientCount > 1 ? 's' : ''}</span>}
                 </div>
                 {m.error && <div className="meter-error">{m.error}</div>}

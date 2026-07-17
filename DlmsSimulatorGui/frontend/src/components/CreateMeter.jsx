@@ -8,6 +8,8 @@ export default function CreateMeter({ templates, onCreate, onUploaded }) {
   const [template, setTemplate] = useState('');
   const [useLogicalName, setUseLogicalName] = useState(true);
   const [iface, setIface] = useState('WRAPPER');
+  const [authLevel, setAuthLevel] = useState('None');
+  const [password, setPassword] = useState('');
   const fileRef = useRef(null);
 
   useEffect(() => {
@@ -23,6 +25,8 @@ export default function CreateMeter({ templates, onCreate, onUploaded }) {
       template,
       useLogicalName,
       interface: iface,
+      authenticationLevel: authLevel,
+      password: authLevel === 'None' ? '' : password,
     });
   }
 
@@ -84,6 +88,27 @@ export default function CreateMeter({ templates, onCreate, onUploaded }) {
             <option value="WRAPPER">WRAPPER (TCP)</option>
             <option value="HDLC">HDLC</option>
           </select>
+        </div>
+      </div>
+
+      <div className="row">
+        <div>
+          <label>Authentication</label>
+          <select value={authLevel} onChange={(e) => setAuthLevel(e.target.value)}>
+            <option value="None">None (open)</option>
+            <option value="Low">Low (LLS)</option>
+            <option value="High">High (HLS)</option>
+          </select>
+        </div>
+        <div>
+          <label>Password / secret</label>
+          <input
+            type="password"
+            value={password}
+            placeholder={authLevel === 'None' ? '—' : 'secret or 0x… hex'}
+            disabled={authLevel === 'None'}
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </div>
       </div>
 

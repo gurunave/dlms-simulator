@@ -20,8 +20,10 @@ from the browser — and watch live client traffic in real time.
 - Start / stop / delete meters at runtime.
 - Browse every COSEM object and attribute loaded from the template.
 - **Edit attribute values live** on a running meter (persisted back to the template).
-- **Live activity log**: client connect/disconnect and every attribute read/write,
-  pushed to the browser over SignalR.
+- **Require authentication** per meter — None, Low (LLS) or High (HLS) with a
+  password/secret, so clients with wrong credentials are rejected.
+- **Live activity log**: client connect/disconnect, every attribute read/write,
+  and authentication failures, pushed to the browser over SignalR.
 - Choose from the bundled Gurux templates or upload your own `.xml`.
 
 ## Layout
@@ -140,7 +142,7 @@ and clock. The reads appear live in the UI activity log.
 | GET  | `/api/templates` | list templates |
 | POST | `/api/templates` | upload a template (`multipart`, field `file`) |
 | GET  | `/api/meters` | list meters |
-| POST | `/api/meters` | create `{name,port,serial,template,useLogicalName,interface}` |
+| POST | `/api/meters` | create `{name,port,serial,template,useLogicalName,interface,authenticationLevel,password}` |
 | POST | `/api/meters/{id}/start` | start |
 | POST | `/api/meters/{id}/stop` | stop |
 | DELETE | `/api/meters/{id}` | delete |

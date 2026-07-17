@@ -86,6 +86,8 @@ In the **New meter** panel (left):
 | **Template** | Which COSEM object set to load (see [Templates](#7-templates)). |
 | **Referencing** | **Logical Name** (modern, LN) or **Short Name** (SN). Most meters use Logical Name. |
 | **Interface** | **WRAPPER (TCP)** for TCP/IP, or **HDLC** for serial-style framing over TCP. |
+| **Authentication** | **None** (open — anyone can associate), **Low (LLS)** or **High (HLS)**. When Low/High is selected, a client must present the matching password to associate. This overrides the level in the template. |
+| **Password / secret** | The LLS/HLS secret required when Authentication is Low or High. Enter plain text, or a `0x`-prefixed hex string for binary secrets. Disabled when Authentication is None. |
 
 Click **+ Add meter**. The meter appears in the list below in the **Stopped**
 state and is selected so you can see its objects.
@@ -181,7 +183,10 @@ probe) at a **running** meter.
 | Referencing | Logical Name or Short Name — same as the meter |
 | Client address | `16` (public client) for the sample templates |
 | Server address | `1` |
-| Authentication | Per the template (the `crystal.xml` sample uses **None**) |
+| Authentication | The level you chose in **New meter** (None / Low / High). If Low or High, the client must send the matching password. |
+
+A meter's row shows a **🔒 Low/High** badge when authentication is required, or
+**🔓 Open** when it is None.
 
 **Quick self-test** with the bundled probe — with a meter running on port 4061:
 
@@ -192,6 +197,10 @@ dotnet run 127.0.0.1 4061
 
 It associates and reads the logical device name, serial number, and clock. You
 should see those reads pop up in the **Live activity** pane as they happen.
+Note the probe connects with **no authentication**, so a meter created with Low
+or High auth will *reject* it — you'll see a **🔒 Authentication … rejected**
+entry in the Live activity pane. To test a successful secured association, use a
+client configured with the meter's password.
 
 ---
 
@@ -209,7 +218,9 @@ should see those reads pop up in the **Live activity** pane as they happen.
 3. Have the client read it back — the edited value is served.
 
 **Simulate different security setups**
-- Pick the matching `LN-v2-*` / `LN-v3-*` template (Low/High/MD5/SHA/GMAC) and
+- Set **Authentication** to Low or High in the **New meter** panel and give the
+  meter a password; clients must then present that secret to associate.
+- Or pick a matching `LN-v2-*` / `LN-v3-*` template (Low/High/MD5/SHA/GMAC) and
   configure your client with the same authentication.
 
 ---
@@ -222,6 +233,7 @@ should see those reads pop up in the **Live activity** pane as they happen.
 | Meter shows **Error** with a red dot | Start failed — usually the port is in use or the template is invalid. Hover the row for the message; try another port/template. |
 | Client can't connect | Meter isn't **Running**; or client's port / interface / referencing don't match the meter. |
 | Client connects but reads fail | Authentication or client/server address mismatch. The sample `crystal.xml` uses client `16`, server `1`, auth **None**. |
+| Client is rejected at association | The meter requires authentication (🔒 badge). The client must send the matching Low/High password. Set the meter's Authentication to **None** for open access, or configure the client's secret. |
 | Activity pane says "connecting" / disconnected | The backend isn't running or was restarted — reload the page after it's up. |
 | Can't edit a value | The meter is Stopped (start it), or you're on attribute 1 (read-only). |
 

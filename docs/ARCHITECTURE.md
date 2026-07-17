@@ -71,8 +71,8 @@ flowchart TD
 
 | Type | Responsibility | Why it exists |
 |------|----------------|---------------|
-| `MeterManager` (singleton) | Owns every meter's lifecycle (create/start/stop/delete), reads/edits COSEM objects, and forwards DLMS events to SignalR. | Single source of truth for meter state; keeps `Program.cs` endpoints thin and gives one place to bridge library events to the UI. |
-| `SimMeter : GXDLMSMeter` | Overrides `PostRead`/`PostWrite` to raise an `Accessed` callback carrying `{LN, objectType, index, value, kind}`. | Adds live-activity hooks **without editing vendored Gurux source**. The base class already implements the whole DLMS server. |
+| `MeterManager` (singleton) | Owns every meter's lifecycle (create/start/stop/delete), reads/edits COSEM objects, applies each meter's authentication level + secret to its associations on start, and forwards DLMS events to SignalR. | Single source of truth for meter state; keeps `Program.cs` endpoints thin and gives one place to bridge library events to the UI. |
+| `SimMeter : GXDLMSMeter` | Overrides `PostRead`/`PostWrite` to raise an `Accessed` callback carrying `{LN, objectType, index, value, kind}`, and `ValidateAuthentication` to raise an `AuthFailed` callback when a client presents wrong credentials. | Adds live-activity and auth hooks **without editing vendored Gurux source**. The base class already implements the whole DLMS server. |
 | `SimulatorHub` (SignalR) | Channel the server pushes `activity` and `meterStatus` messages over. | Real-time UI updates without polling. The hub itself has no methods — it's push-only. |
 
 Each running meter is held in a private `MeterManager.Instance` record:
